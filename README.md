@@ -37,3 +37,6 @@ Mientras el programa se ejecuta en segundo plano, la consola interactiva permite
 ## Apagado Seguro (Graceful Shutdown)
 Para finalizar la ejecución de forma segura, presione Ctrl + C (SIGINT).
 El programa evitará crear nuevos emparejamientos, esperará a que las partidas en curso finalicen y guardará el estado de los jugadores en el archivo dump.bin. Al volver a ejecutar el programa, los ELOs se restaurarán automáticamente.
+
+## Historial de partidas
+Al finalizar el programa se registrara un log 'game_logs.txt' el cual registrara la ultima jugada de tablero de cada partida realizada con su respectivo resultado.
