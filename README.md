@@ -22,7 +22,7 @@ Mientras el programa se ejecuta en segundo plano, la consola interactiva permite
 1. **Ver estadísticas de un jugador específico:**
    Muestra victorias, derrotas, empates y ELO actual.
    ```bash
-   player_stats 4
+   player_stats 4 (Puede ser de cualquier id de jugador disponible)
    ```
 2. **Ver todas las partidas activas:**
    Lista cuántos tableros están en uso y qué jugadores se están enfrentando en este milisegundo.
@@ -32,5 +32,8 @@ Mientras el programa se ejecuta en segundo plano, la consola interactiva permite
 3. **Ver el estado detallado de un tablero:**
    Dibuja la grilla del Tic-Tac-Toe en tiempo real y muestra el historial de movimientos de esa partida.
    ```bash
-   match_status 2
+   match_status 2 (Puede ser de cualquier match que este disponible en el momento)
    ```
+## Apagado Seguro (Graceful Shutdown)
+Para finalizar la ejecución de forma segura, presione Ctrl + C (SIGINT).
+El programa evitará crear nuevos emparejamientos, esperará a que las partidas en curso finalicen y guardará el estado de los jugadores en el archivo dump.bin. Al volver a ejecutar el programa, los ELOs se restaurarán automáticamente.
