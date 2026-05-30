@@ -3,3 +3,34 @@
 
 ## Configuración (.env)
 Antes de ejecutar, asegúrese de tener un archivo .env en la misma ruta con los siguientes parámetros mínimos:
+```env
+   N_PLAYERS=100
+   K_BOARDS=20
+   MAX_ELO_DIFF=50
+   TURN_DELAY_MS=50
+   REENTER_PROBABILITY=0.7
+   K_ELO=30
+   SNAPSHOT_PATH=dump.bin
+   ```
+## Ejecución
+Para iniciar el simulador:
+```env
+   ./cmatch
+   ```
+## Consola de Monitoreo (Ejemplos Útiles)
+Mientras el programa se ejecuta en segundo plano, la consola interactiva permite monitorear el estado en vivo. A continuación, ejemplos de los comandos disponibles:
+1. **Ver estadísticas de un jugador específico:**
+   Muestra victorias, derrotas, empates y ELO actual.
+   ```bash
+   player_stats 4
+   ```
+2. **Ver todas las partidas activas:**
+   Lista cuántos tableros están en uso y qué jugadores se están enfrentando en este milisegundo.
+   ```bash
+   current_matches
+   ```
+3. **Ver el estado detallado de un tablero:**
+   Dibuja la grilla del Tic-Tac-Toe en tiempo real y muestra el historial de movimientos de esa partida.
+   ```bash
+   match_status 2
+   ```
