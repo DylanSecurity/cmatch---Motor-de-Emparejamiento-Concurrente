@@ -15,6 +15,7 @@ Antes de ejecutar, asegúrese de tener un archivo .env en la misma ruta con los 
 ## Ejecución
 Para iniciar el simulador:
 ```env
+   g++ -Wall -Wextra -std=c++17 -lpthread cmatch.cpp -o cmatch
    ./cmatch
    ```
 ## Consola de Monitoreo (Ejemplos Útiles)
